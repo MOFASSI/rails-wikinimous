@@ -1,0 +1,12 @@
+<h1>welcome to the index.html.erb</h1>
+<h1>Hello we have the following articles</h1>
+
+<ul>
+<% @articles.each do |article| %>
+<li>
+  <%= link_to article.title, article_path(article) %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to " +Add a new Article +", "/articles/new" %>

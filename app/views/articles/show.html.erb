@@ -1,0 +1,12 @@
+<h1>Welcome to the show</h1>
+<%= @article.title %>
+<ul>
+<li> <%= @article.content %></li>
+</ul>
+
+<%= link_to "Read more articles", "/articles" %>
+<%= link_to "Edit this article", article_edit_path(@article) %>
+<%= link_to "Delete this article",
+   article_delete_path(@article),
+   method: :delete,
+   data: {confirm: "Are you sure?"} %>
